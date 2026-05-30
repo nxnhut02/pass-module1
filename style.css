@@ -1,0 +1,30 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+#app {
+    width: min-content;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#info {
+    display: flex;
+    padding: 10px;
+
+}
+
+#sample-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#pieces {
+    background: red;
+    width: 600px;
+    height: 600px;
+    display: grid;
+
+}
