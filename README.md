@@ -8,3 +8,6 @@ Cơ chế trò chơi bao gồm:
 2. **Trộn các mảnh ghép:** Sau đó, các ô vuông được trộn lẫn
 3. **Giải câu đố:** Sắp xếp lại các ô vuông để tạo thành hình ảnh ban đầu.
 
+Trò chơi kết thúc khi bạn sắp xếp lại các mảnh ghép đúng thứ tự.
+
+Hãy xem bản demo trực tiếp tại đây: [https://pass-module1.vercel.app/](https://pass-module1.vercel.app/)
