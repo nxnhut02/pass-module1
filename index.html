@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <img id ="title" src="logo.png" alt="Sliding Puzzle Game Logo">
+    
+    <div id="game-container">
+        <div id="sample-container">
+            <img id="sample-img" src="sample-img.jpg" alt="Sample Image">
+        </div>
+        <div id="board"></div>
+    </div>
+    <div class="modes">
+    <button onclick="changeMode(3, 'easy')">Easy</button>
+    <button onclick="changeMode(5, 'medium')">Medium</button>
+    <button onclick="changeMode(8, 'hard')">Hard</button>
+    </div>
+
+    <div class="status">Turns: <span id="turns">0</span></div>
+</body>
+</html>
