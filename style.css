@@ -1,8 +1,8 @@
 body {
-    background: rgb(184, 160, 164);
+    background: #B8A0A4;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: rgb(95, 94, 94);
+    color: #5F5E5E;
     font-weight: bold;
 }
 
@@ -29,7 +29,7 @@ body {
     height: 180px;
     border: 1px solid #020202;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px #020202;
     transition: transform 0.3s ease;
 }
 
@@ -40,19 +40,52 @@ body {
 #board {
     width: 360px;
     height: 360px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #020202;
+    background-color: #FFFFFF;
+    
+    border:  #020202;
+    box-shadow: 0 4px 8px #020202;
+    
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 #board img {
     width: calc(100% / var(--cols, 3));
     height: calc(100% / var(--rows, 3));
-    border: 1px solid #020202;
+    
+    border: 1px solid transparent;
     box-sizing: border-box;
-
     object-fit: cover;
     display: block;
 }
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-container button {
+    padding: 8px 15px;
+    font-weight: bold;
+    color: #3b3939;
+    background-color: #FFFFFF;
+    border: 1px solid #020202;
+    border-radius: 90px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #94dab1;
+    color: #070707;
+}
+
+#turns-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #494747;
+}   

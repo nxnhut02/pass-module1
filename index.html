@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sliding Puzzle Game</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
@@ -16,12 +17,14 @@
         </div>
         <div id="board"></div>
     </div>
-    <div class="modes">
+    <div class="button-container">
     <button onclick="changeMode(3, 'easy')">Easy</button>
     <button onclick="changeMode(5, 'medium')">Medium</button>
     <button onclick="changeMode(8, 'hard')">Hard</button>
     </div>
 
-    <div class="status">Turns: <span id="turns">0</span></div>
+    <div id="turns-container">
+        Turns: <span id="turns">0</span>
+    </div>
 </body>
 </html>

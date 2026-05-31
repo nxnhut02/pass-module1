@@ -18,7 +18,6 @@ function changeMode(size, modeName) {
     startGame();
 }
 
-
 function startGame() {
     const board = document.getElementById("board");
     board.innerHTML = "";
@@ -27,11 +26,12 @@ function startGame() {
     document.getElementById("turns").innerText = turns;
     isGameOver = false;
 
+    board.style.border = "3px solid #020202";
+
     board.style.setProperty('--cols', columns);
     board.style.setProperty('--rows', rows);
 
     let totalTiles = rows * columns;
-    
     blankImgName = totalTiles.toString() + ".jpg";
 
     generateRandomOrder(totalTiles);
@@ -61,16 +61,13 @@ function startGame() {
 
 function generateRandomOrder(totalTiles) {
     imgOrder = [];
-    
     for (let i = 1; i < totalTiles; i++) {
         imgOrder.push(i.toString());
     }
-
     for (let i = imgOrder.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [imgOrder[i], imgOrder[j]] = [imgOrder[j], imgOrder[i]];
     }
-
     imgOrder.push(totalTiles.toString());
 }
 
@@ -120,10 +117,8 @@ function checkWin() {
     let expectedNumber = 1;
 
     for (let i = 0; i < tiles.length; i++) {
-
         let srcParts = tiles[i].src.split('/');
         let currentImgName = srcParts[srcParts.length - 1];
-
         let correctImgName = expectedNumber + ".jpg";
 
         if (currentImgName !== correctImgName) {
@@ -133,8 +128,7 @@ function checkWin() {
     }
 
     isGameOver = true;
-
     blankTile.style.opacity = "1"; 
 
-    alert("You Win! Bạn đã hoàn thành màn chơi sau " + turns + " lượt đi.");
+    alert("You Win! You completed the level after " + turns + " turns.");
 }
